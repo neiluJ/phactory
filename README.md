@@ -4,7 +4,9 @@ Phar archive maker for PHP projects.
 
 ## Download
 
-Download the lastest release in the [bin](http://github.com/neiluj/phactory/tree/master/bin) folder.
+Release is in the [bin](http://github.com/neiluJ/phactory/tree/master/bin) folder.
+
+* [Download here](https://github.com/neiluJ/phactory/blob/master/bin/phactory.phar?raw=true) (direct download)
 
 ## Usage
 
