@@ -1,0 +1,26 @@
+{
+    "name": "neiluj/phactory",
+    "description": "Phar Archive Maker for PHP Projects",
+    "type": "utility",
+    "keywords": [
+        "phar",
+        "archive",
+        "make"
+    ],
+    "authors": [
+        {
+            "name": "Julien",
+            "email": "julien@nitronet.org"
+        }
+    ],
+    "license": "BSD-3-Clause",
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/console": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Phactory": "src/"
+        }
+    }
+}
