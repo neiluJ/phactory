@@ -116,7 +116,7 @@ class MakeCommand extends Command
      * @param InputInterface  $input
      * @param OutputInterface $output
      *
-     * @throws RuntimeException
+     * @throws \RuntimeException
      * @return void
      */
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -126,7 +126,7 @@ class MakeCommand extends Command
         $current    = getcwd();
 
         if(!Phar::canWrite()) {
-            throw new RuntimeException(
+            throw new \RuntimeException(
                 sprintf(
                     "Cannot create Phar archives on this environment " .
                     "- please configure your 'phar.readonly' directive."
@@ -155,7 +155,7 @@ class MakeCommand extends Command
                 break;
 
             default:
-                throw new RuntimeException(
+                throw new \RuntimeException(
                     sprintf("Invalid Phar format: %s", $formatOpt)
                 );
         }
@@ -208,7 +208,7 @@ class MakeCommand extends Command
         $vendorsDir = $current . DIRECTORY_SEPARATOR . 'vendor';
         if ($vendors) {
             if(!is_dir($vendorsDir)) {
-                throw new RuntimeException("'vendor' directory not found");
+                throw new \RuntimeException("'vendor' directory not found");
             }
 
             $ite = new \RecursiveDirectoryIterator(
@@ -232,7 +232,7 @@ class MakeCommand extends Command
         $stub = $input->getOption("stub");
         if (!empty($stub)) {
             if(!is_file($stub)) {
-                throw new RuntimeException("stub file $stub not found");
+                throw new \RuntimeException("stub file $stub not found");
             }
 
             $output->writeln("Adding stub: <comment>$stub</comment>");
